@@ -15,6 +15,10 @@ function setTextFieldById(textId, area) {
 document.getElementById('btn-triangle').addEventListener('click', function () {
     const base = getInputValueById('input-width');
     const height = getInputValueById('input-height');
+    if (isNaN(base) || isNaN(height)) {
+        alert('Only Accept Numbers')
+        return
+    }
     const area = (0.5 * base * height).toFixed(2);
     setTextFieldById('triangle-area', area)
 })
@@ -22,13 +26,22 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
 document.getElementById('btn-rectangle').addEventListener('click', function () {
     const base = getInputValueById('input-rec-width');
     const length = getInputValueById('input-rec-length');
+    if (isNaN(base) || isNaN(length)) {
+        alert('Only Accept Numbers')
+        return
+    }
     const area = (base * length).toFixed(2);
     setTextFieldById('rectangle-area', area)
+
 })
 // Parallelogram Section
 document.getElementById('btn-parallelogram').addEventListener('click', function () {
     const base = getInputValueById('input-par-width');
     const height = getInputValueById('input-par-height');
+    if (isNaN(base) || isNaN(height)) {
+        alert('Only Accept Numbers')
+        return
+    }
     const area = (base * height).toFixed(2);
     setTextFieldById('parallelogram-area', area)
 
@@ -38,6 +51,10 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
 document.getElementById('btn-rhombus').addEventListener('click', function () {
     const diagonal1 = getInputValueById('input-rho-value1');
     const diagonal2 = getInputValueById('input-rho-value2');
+    if (isNaN(diagonal1) || isNaN(diagonal2)) {
+        alert('Only Accept Numbers')
+        return
+    }
     const area = (0.5 * diagonal1 * diagonal2).toFixed(2);
     setTextFieldById('rhombus-area', area)
 })
@@ -45,6 +62,10 @@ document.getElementById('btn-rhombus').addEventListener('click', function () {
 document.getElementById('btn-pentagon').addEventListener('click', function () {
     const perimeter = getInputValueById('input-p');
     const apothem = getInputValueById('input-b');
+    if (isNaN(perimeter) || isNaN(apothem)) {
+        alert('Only Accept Numbers')
+        return
+    }
     const area = (0.5 * perimeter * apothem).toFixed(2);
     setTextFieldById('pentagon-area', area)
 
@@ -53,6 +74,10 @@ document.getElementById('btn-pentagon').addEventListener('click', function () {
 document.getElementById('btn-ellipse').addEventListener('click', function () {
     const axisA = getInputValueById('input-ellipse-1');
     const axisB = getInputValueById('input-ellipse-2');
+    if (isNaN(axisA) || isNaN(axisB)) {
+        alert('Only Accept Numbers')
+        return
+    }
     const area = (3.1416 * axisA * axisB).toFixed(2);
     setTextFieldById('ellipse-area', area);
 })
