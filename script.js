@@ -16,7 +16,7 @@ function addToCalculationEntry(areaType, value) {
     const count = calculationEntry.childElementCount;
     const entryValue = document.createElement('p');
     entryValue.classList.add('my-4')
-    entryValue.innerHTML = `${count}. ${areaType} ${value} cm<sup>2</sup> <button class ="btn btn-success">Convert to m<sup>2</sup> </button> `;
+    entryValue.innerHTML = `${count + 1}. ${areaType} ${value} cm<sup>2</sup> <button class ="btn btn-success">Convert to m<sup>2</sup> </button> `;
     calculationEntry.appendChild(entryValue);
 
 }
