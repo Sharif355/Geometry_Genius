@@ -1,3 +1,16 @@
+//reusable function => to reduce code repetition
+function getInputValueById(inputId) {
+    const valueById = document.getElementById(inputId)
+    const inputValue = valueById.value;
+    const value = parseFloat(inputValue);
+    return value;
+}
+
+function setTextFieldById(textId, area) {
+    const textFieldById = document.getElementById(textId)
+    textFieldById.innerText = area;
+}
+
 // Triangle section
 document.getElementById('btn-triangle').addEventListener('click', function () {
     const base = getInputValueById('input-width');
@@ -43,16 +56,3 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
     const area = 3.1416 * axisA * axisB;
     setTextFieldById('ellipse-area', area);
 })
-
-//reusable function => to reduce code repetition
-function getInputValueById(inputId) {
-    const valueById = document.getElementById(inputId)
-    const inputValue = valueById.value;
-    const value = parseFloat(inputValue);
-    return value;
-}
-
-function setTextFieldById(textId, area) {
-    const textFieldById = document.getElementById(textId)
-    textFieldById.innerText = area;
-}
